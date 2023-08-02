@@ -1,0 +1,11 @@
+﻿@model App.Models.ProductModel
+@{
+    Layout = "_Layout";
+}
+<div class=" card bg-success text-white">
+    <h1 class="card-header">@Model?.Name</h1>
+    <div class="card-body">
+        <p class="card-text">Gia: @Model?.Price</p>
+    </div>
+</div>
+<hr />

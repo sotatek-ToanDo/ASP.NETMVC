@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    //URL.Action()
+    //Url.ActionLink()
+    //Url.RouteUrl()
+    //URL.Link()
+}
+<partial name="AlertMessage" />
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<p>
+    @Url.Action("Index", "Product")
+</p>
+<p>
+    @Url.Action("Index", "Product", new { area = "ProductManage" ,id = 123})
+</p>
+<p>
+    @Url.RouteUrl("default" , new {action="HelloView",controller="Home"})
+</p>
+<p>
+    @Url.RouteUrl("neptune2")
+</p>

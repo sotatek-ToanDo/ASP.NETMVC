@@ -1,0 +1,13 @@
+﻿@model App.Models.ProductModel
+@{
+    Layout = "_Layout";
+    var product = ViewBag.product as App.Models.ProductModel;
+}
+
+<div class=" card bg-warning text-white">
+    <h1 class="card-header">product?.Name</h1>
+    <div class="card-body">
+        <p class="card-text">Price: product?.Price</p>
+    </div>
+</div>
+<hr />

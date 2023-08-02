@@ -1,0 +1,25 @@
+﻿
+@model App.Models.PanetModel;
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        <h1>@Model.Name</h1>
+    </div>
+    <div class="card w-50">
+        <img src="~/planet/@(Model.Name).jpg"  alt=""/>
+        <div class="card-body">
+            <h5>@Model.VnName</h5>
+            <div class="card-text">
+                @Model.Content
+            </div>
+            <a class="card-link" asp-action="Index">Cac hanh Tinh</a>
+        </div>
+    </div>
+</body>
+</html>

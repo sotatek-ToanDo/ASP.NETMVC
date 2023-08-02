@@ -1,0 +1,21 @@
+
+@using App.Models
+@model List<ProductModel>
+@{ 
+    Layout = "_Layout";
+}
+<h1>Danh sach cac san pham</h1>
+<ul>
+    @foreach (var product in Model)
+    {
+        <li>
+            @product.Name
+        </li>
+    }
+</ul>
+<p>
+    @Url.Action("Index","Product")
+</p>
+<p>
+    @Url.Action("Index","Product", new { area = "ProductManage" })
+</p>

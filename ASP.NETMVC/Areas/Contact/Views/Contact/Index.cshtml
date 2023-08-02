@@ -1,0 +1,54 @@
+﻿@model IEnumerable<App.Models.Contacts.Contact>
+@{
+  ViewDate["Title"]= "danh sach lien he";   
+ }
+
+<h1>Index</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.fullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataSent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Message)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model){
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => item.fullName)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => item.Email)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => item.DataSent)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => item.Message)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => item.Phone)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a>
+                <a asp-action="Details" asp-route-id="@item.id">Details</a>
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
